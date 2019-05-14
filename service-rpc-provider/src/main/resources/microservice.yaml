@@ -1,0 +1,16 @@
+APPLICATION_ID: start.servicecomb.io  #应用程序编号
+service_description:
+  name: prodiver-rpc  #应用程序的名称
+  version: 0.0.1
+  properties:
+    allowCrossApp: true  # 允许跨站访问
+servicecomb:
+  handler:
+    chain:
+      Provider: {}
+  rest:
+    address: 0.0.0.0:9090
+  service:
+    registry:
+      address: http://127.0.0.1:30100  #服务注册中心的地址
+      autodiscovery: false
